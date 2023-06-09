@@ -313,7 +313,7 @@
   <div class="card-container">
     <button
       class="card card-small"
-      (click)="selection.value = 'component'"
+      (click)="selection.value = 'taskAndroid'"
       tabindex="0"
     >
       <h3><i class="icon icon-android"></i> &nbsp; Task Organizer</h3>
@@ -321,7 +321,7 @@
 
     <button
       class="card card-small"
-      (click)="selection.value = 'material'"
+      (click)="selection.value = 'taskApple'"
       tabindex="0"
     >
       <h3><i class="icon icon-appleinc"></i> &nbsp; Task Organizer</h3>
@@ -329,18 +329,18 @@
 
     <button
       class="card card-small"
-      (click)="selection.value = 'pwa'"
+      (click)="selection.value = 'saveAndroid'"
       tabindex="0"
     >
-      <h3><i class="icon icon-android"></i> &nbsp; Task Organizer</h3>
+      <h3><i class="icon icon-android"></i> &nbsp; Save Dev</h3>
     </button>
 
     <button
       class="card card-small"
-      (click)="selection.value = 'dependency'"
+      (click)="selection.value = 'saveApple'"
       tabindex="0"
     >
-      <h3><i class="icon icon-appleinc"></i> &nbsp; Task Organizer</h3>
+      <h3><i class="icon icon-appleinc"></i> &nbsp; Save Dev</h3>
     </button>
 
     <!--  <button
@@ -380,12 +380,19 @@
 
   <!-- Terminal -->
   <div class="terminal" [ngSwitch]="selection.value">
-    <pre *ngSwitchDefault>ng generate component xyz</pre>
-    <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
-    <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
-    <pre *ngSwitchCase="'dependency'">ng add _____</pre>
-    <pre *ngSwitchCase="'test'">ng test</pre>
-    <pre *ngSwitchCase="'build'">ng build</pre>
+    <pre *ngSwitchDefault>select an option to know more...</pre>
+    <pre *ngSwitchCase="'saveApple'">
+"Save Dev" App Publishing in progress in App Store</pre
+    >
+    <pre *ngSwitchCase="'saveAndroid'">
+"Save Dev" App Publishing in progress in Play Store</pre
+    >
+    <pre *ngSwitchCase="'taskAndroid'">
+"Task Organizer" App Publishing in progress in Play Store</pre
+    >
+    <pre *ngSwitchCase="'taskApple'">
+"Task Organizer" App Publishing in progress in App Store</pre
+    >
   </div>
 
   <svg
